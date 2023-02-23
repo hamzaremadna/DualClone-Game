@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="DualClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hOM-av-T7p">
+                                <rect key="frame" x="304" y="189" width="59" height="54"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hOM-av-T7p" secondAttribute="trailing" constant="284" id="CwV-rC-qtA"/>
+                            <constraint firstItem="hOM-av-T7p" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="284" id="FfL-rp-xhu"/>
+                            <constraint firstItem="hOM-av-T7p" firstAttribute="top" secondItem="maK-i9-Uhn" secondAttribute="bottom" constant="189" id="cE3-fW-c9q"/>
+                            <constraint firstItem="khH-OB-KpY" firstAttribute="top" secondItem="hOM-av-T7p" secondAttribute="bottom" constant="132" id="l0q-zg-CVk"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZRT-fb-5ST" appends="YES" id="Zkd-U9-gIX"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageview" destination="hOM-av-T7p" id="8cF-OO-bYc"/>
+                        <outlet property="swipe" destination="ZRT-fb-5ST" id="53c-kf-2kl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ZRT-fb-5ST"/>
+            </objects>
+            <point key="canvasLocation" x="33.733133433283363" y="29.600000000000001"/>
+        </scene>
+    </scenes>
+</document>
